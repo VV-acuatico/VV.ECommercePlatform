@@ -1,0 +1,40 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <!-- Указывает VS, что это проект JavaScript/TypeScript -->
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <!-- Ключевое свойство: говорит VS не запускать ng version -->
+    <DisableNgVersion>true</DisableNgVersion>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VV.ECommercePlatform.WebApp</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <TypeScriptTarget>ES2022</TypeScriptTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Включаем в проект все типичные для Angular файлы -->
+    <Content Include="**\*.ts" />
+    <Content Include="**\*.html" />
+    <Content Include="**\*.scss" />
+    <Content Include="**\*.css" />
+    <Content Include="**\*.json" Exclude="node_modules\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="angular.json" />
+    <None Include="package-lock.json" />
+    <None Include="package.json" />
+    <None Include="public\favicon.ico" />
+    <None Include="README.md" />
+    <None Include="src\app\app.config.ts" />
+    <None Include="src\app\app.html" />
+    <None Include="src\app\app.routes.ts" />
+    <None Include="src\app\app.scss" />
+    <None Include="src\app\app.ts" />
+    <None Include="src\index.html" />
+    <None Include="src\main.ts" />
+    <None Include="src\styles.scss" />
+    <None Include="tsconfig.app.json" />
+    <None Include="tsconfig.json" />
+    <None Include="tsconfig.spec.json" />
+  </ItemGroup>
+</Project>
